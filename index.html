@@ -1,46 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>N60 TV News</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<title>N60 TV News</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+<div class="background"></div>
 
 <div class="container">
 
     <img src="logo.png" class="logo" alt="N60 TV">
 
-    <h1>N60 TV News</h1>
-    <p>Follow Us Everywhere</p>
+    <h1>N60 TV NEWS</h1>
 
-    <a href="https://www.instagram.com/n60tv_news/"
-       class="card instagram"
-       target="_blank">
-        <i class="fab fa-instagram"></i>
-        Instagram
-    </a>
+    <p class="subtitle">
+        Latest News • Breaking Stories • Updates
+    </p>
 
-    <a href="https://youtube.com/@n60tv"
-       class="card youtube"
-       target="_blank">
-        <i class="fab fa-youtube"></i>
-        YouTube
-    </a>
+    <button class="card instagram" onclick="openInstagram()">
+        <i class="fa-brands fa-instagram"></i>
+        <span>Instagram</span>
+    </button>
 
-    <a href="https://whatsapp.com/channel/0029VbCykOYH5JM0mfzYZg0Z"
-       class="card whatsapp"
-       target="_blank">
-        <i class="fab fa-whatsapp"></i>
-        WhatsApp Channel
-    </a>
+    <button class="card youtube" onclick="openYoutube()">
+        <i class="fa-brands fa-youtube"></i>
+        <span>YouTube</span>
+    </button>
+
+    <button class="card whatsapp" onclick="openWhatsapp()">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>WhatsApp Channel</span>
+    </button>
 
 </div>
+
+<script>
+
+function isIOS() {
+    return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
+function isAndroid() {
+    return /Android/i.test(navigator.userAgent);
+}
+
+function openInstagram() {
+
+    if(isAndroid() || isIOS()) {
+
+        window.location = "instagram://user?username=n60tv_news";
+
+        setTimeout(() => {
+            window.location =
+            "https://www.instagram.com/n60tv_news/";
+        },1000);
+
+    } else {
+
+        window.open(
+        "https://www.instagram.com/n60tv_news/",
+        "_blank");
+    }
+}
+
+function openYoutube() {
+
+    if(isAndroid()) {
+
+        window.location =
+        "intent://www.youtube.com/@n60tv#Intent;package=com.google.android.youtube;scheme=https;end";
+
+        setTimeout(() => {
+            window.location =
+            "https://youtube.com/@n60tv";
+        },1000);
+
+    }
+    else {
+
+        window.open(
+        "https://youtube.com/@n60tv",
+        "_blank");
+    }
+}
+
+function openWhatsapp() {
+
+    if(isAndroid() || isIOS()) {
+
+        window.location =
+        "https://whatsapp.com/channel/0029VbCykOYH5JM0mfzYZg0Z";
+
+    } else {
+
+        window.open(
+        "https://whatsapp.com/channel/0029VbCykOYH5JM0mfzYZg0Z",
+        "_blank");
+    }
+}
+
+</script>
 
 </body>
 </html>

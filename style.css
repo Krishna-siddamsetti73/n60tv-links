@@ -191,23 +191,16 @@ h1{
 
     margin-top:20px;
 
-    padding:20px;
+    padding-top:18px;
 
-    border-radius:20px;
-
-    background:#08164d;
-
-    border:2px solid #ffc107;
-
-    box-shadow:
-        0 0 15px rgba(255,193,7,.25);
+    border-top:1px solid rgba(255,255,255,0.15);
 
     text-align:center;
 }
 
 .ad-title{
 
-    color:#ffd700;
+    color:white;
 
     font-size:18px;
 
@@ -218,15 +211,13 @@ h1{
 
 .ad-subtitle{
 
-    color:white;
+    color:rgba(255,255,255,.75);
 
     font-size:12px;
 
     letter-spacing:1px;
 
-    margin-bottom:15px;
-
-    opacity:.9;
+    margin-bottom:12px;
 }
 
 .ad-phone{
@@ -239,13 +230,7 @@ h1{
 
     text-decoration:none;
 
-    background:#ffc107;
-
-    color:#000;
-
-    padding:12px 20px;
-
-    border-radius:12px;
+    color:white;
 
     font-size:24px;
 
@@ -256,10 +241,7 @@ h1{
 
 .ad-phone:hover{
 
-    transform:translateY(-2px);
-
-    box-shadow:
-        0 5px 20px rgba(255,193,7,.4);
+    opacity:.85;
 }
 
 .ad-phone i{
